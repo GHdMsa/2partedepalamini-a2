@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Celeste 💙</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#a0d8f1;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR GENERAL */
+.container{
+  text-align:center;
+  width:100%;
+  padding:20px;
+  box-sizing:border-box;
+}
+
+/* REGALO */
+#regalo{
+  width:60vw;
+  max-width:220px;
+  aspect-ratio:1/1;
+  background:url('regalo.png') center/cover no-repeat;
+  cursor:pointer;
+  animation:latir 1.2s infinite;
+  margin:0 auto;
+}
+
+/* ANIMACIÓN REGALO */
+@keyframes latir{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.08); }
+}
+
+/* CARTA */
+#carta{
+  display:none;
+  width:100%;
+  max-width:420px;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 20px rgba(0,0,0,.3);
+  margin:0 auto;
+}
+
+/* TEXTO */
+#texto{
+  font-size:4vw;
+  line-height:1.4;
+  margin-bottom:20px;
+}
+
+/* BOTÓN CANCIÓN */
+#botonCancion{
+  display:inline-block;
+  padding:12px 20px;
+  background:#ff6f61;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-size:4vw;
+}
+
+/* AJUSTES PARA MÓVILES PEQUEÑOS */
+@media(max-width:360px){
+  #texto{ font-size:15px; }
+  #botonCancion{ font-size:14px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- REGALO -->
+  <div id="regalo"></div>
+
+  <!-- CARTA -->
+  <div id="carta">
+    <div id="texto">
+      Olaaaa mi niña hermosa 😿🫶💕<br><br>
+      Feliz navidad mi amor.  
+      Este detallito lo hice con todo mi corazón solo para ti.  
+      Gracias por estar conmigo y por hacer mis días más bonitos.  
+      Te amo muchísimo mi niña preciosa 😿🫶💕
+    </div>
+
+    <!-- BOTÓN A LA CANCIÓN -->
+    <a 
+      id="botonCancion" 
+      href="https://m.youtube.com/watch?v=ZyowJ5GB2Dk&list=PLmd3unaE1YCJCplCwB04ji7SmjAgPI4QZ&index=3&pp=iAQB8AUB0gcJCU0KAYcqIYzv"
+      target="_blank"
+    >
+      pícale aquí mi niña 💕
+    </a>
+  </div>
+
+</div>
+
+<script>
+const regalo = document.getElementById('regalo');
+const carta = document.getElementById('carta');
+
+regalo.addEventListener('click', ()=>{
+  regalo.style.display = 'none';
+  carta.style.display = 'block';
+});
+</script>
+
+</body>
+</html>
